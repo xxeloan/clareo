@@ -180,3 +180,96 @@ main { display: flex; flex-direction: column; gap: 72px; }
   .grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
 }
+/* === Reveal animation (fade + rise) ============================== */
+[data-reveal] {
+  --reveal-delay: 0ms;
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  transition:
+    opacity 520ms cubic-bezier(.2,.65,.2,1) var(--reveal-delay),
+    transform 520ms cubic-bezier(.2,.65,.2,1) var(--reveal-delay),
+    filter 520ms cubic-bezier(.2,.65,.2,1) var(--reveal-delay);
+  filter: blur(2px);
+  will-change: opacity, transform, filter;
+}
+
+.is-revealed[data-reveal] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* === Petits utilitaires / styles basiques (si pas déjà présents) === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  padding: 96px 0 64px;
+}
+
+.hero .cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.trust {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  opacity: .9;
+  font-size: 14px;
+}
+
+.features {
+  padding: 64px 0 96px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+  border: 1px solid transparent;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: #4f46e5; /* indigo-600 */
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(79,70,229,.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e5e7eb;
+  border-color: rgba(229,231,235,.2);
+}
