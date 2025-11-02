@@ -102,6 +102,54 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </section>
+
+{/* METRICS / KPIs */}
+<section className="metrics">
+  <div className="container grid kpis">
+    <div className="kpi" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
+      <h4>+120k€</h4>
+      <p>Budget agrégé suivi / mois</p>
+    </div>
+    <div className="kpi" data-reveal style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
+      <h4>98.9%</h4>
+      <p>Synchronisations bancaires réussies</p>
+    </div>
+    <div className="kpi" data-reveal style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>
+      <h4>~12 min</h4>
+      <p>Gagnées / semaine en automatisation</p>
+    </div>
+  </div>
+</section>
+
+{/* CTA FINAL */}
+<section className="bottom-cta">
+  <div className="container" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
+    <h2>Prêt à piloter vos finances simplement ?</h2>
+    <p>Connectez vos comptes, suivez votre budget et vos investissements au même endroit.</p>
+    <div className="cta">
+      <a className="btn btn-primary" href="#contact">Demander une démo</a>
+      <a className="btn btn-secondary" href="#features">Revoir les fonctionnalités</a>
+    </div>
+  </div>
+</section>
+
+{/* FOOTER */}
+<footer className="site-footer">
+  <div className="container footer-inner">
+    <div className="brand" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
+      <strong>Clareo</strong>
+      <span>© {new Date().getFullYear()}</span>
+    </div>
+    <nav className="footer-nav" data-reveal style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+</main>
     </main>
   );
 }
