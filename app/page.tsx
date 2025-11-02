@@ -1,65 +1,138 @@
-import Image from "next/image";
-
+// app/page.tsx
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* HERO */}
+      <section className="hero">
+        <div className="container">
+          <div className="hero-left">
+            <h1>Clareo — pilotage financier moderne</h1>
+            <p className="lead">
+              Donnez à vos décisions financières la clarté qu’elles méritent :
+              dashboards temps réel, KPIs clés et reporting pro — sans Excel.
+            </p>
+            <div className="cta-row">
+              <a className="btn btn-primary" href="#contact">Demander une démo</a>
+              <a className="btn btn-secondary" href="#services">Découvrir les services</a>
+            </div>
+            <ul className="bullets">
+              <li>Connexion à la compta (Pennylane / QuickBooks / Sage)</li>
+              <li>Trésorerie, marge, EBITDA, cash burn en temps réel</li>
+              <li>Exports PDF & liens partageables</li>
+            </ul>
+          </div>
+          <div className="hero-right">
+            <div className="mockup">
+              <div className="mockup-top">
+                <div className="dot" />
+                <div className="dot" />
+                <div className="dot" />
+              </div>
+              <div className="mockup-body">
+                <div className="card kpi">
+                  <div>Trésorerie</div>
+                  <strong>€ 238 450</strong>
+                </div>
+                <div className="card chart" />
+                <div className="grid">
+                  <div className="card mini">CA mensuel<br/><strong>€ 84 200</strong></div>
+                  <div className="card mini">Marge brute<br/><strong>54,8%</strong></div>
+                  <div className="card mini">EBITDA<br/><strong>€ 18 900</strong></div>
+                  <div className="card mini">Burn rate<br/><strong>€ −12 300</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* VALEUR */}
+      <section className="value">
+        <div className="container">
+          <h2>Pourquoi les dirigeants choisissent Clareo</h2>
+          <div className="cards">
+            <div className="card feature">
+              <h3>Simplicité</h3>
+              <p>Une interface claire, pensée pour les dirigeants non-financiers.</p>
+            </div>
+            <div className="card feature">
+              <h3>Temps réel</h3>
+              <p>Vos données se synchronisent automatiquement avec votre comptabilité.</p>
+            </div>
+            <div className="card feature">
+              <h3>Décisions</h3>
+              <p>KPIs actionnables, alertes de trésorerie et objectifs suivis.</p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="services">
+        <div className="container">
+          <h2>Nos services</h2>
+          <div className="cards">
+            <div className="card service">
+              <h3>Reporting financier</h3>
+              <p>Tableaux de bord personnalisés : trésorerie, marge, EBITDA, budget vs réel.</p>
+            </div>
+            <div className="card service">
+              <h3>Prévisionnel</h3>
+              <p>Scénarios de cash, plan de charges, objectifs et suivi automatique.</p>
+            </div>
+            <div className="card service">
+              <h3>Multi-entités</h3>
+              <p>Consolidation de groupe, comparaisons et exports investisseurs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROOF / CHIFFRES */}
+      <section className="proof">
+        <div className="container stats">
+          <div className="stat">
+            <strong>–6 h</strong>
+            <span>de reporting par mois</span>
+          </div>
+          <div className="stat">
+            <strong>+30%</strong>
+            <span>de visibilité cash</span>
+          </div>
+          <div className="stat">
+            <strong>95%</strong>
+            <span>de satisfaction</span>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="contact">
+        <div className="container">
+          <h2>Parlons de vos besoins</h2>
+          <p className="lead">Laissez-nous vos coordonnées — un expert vous répond sous 24 h.</p>
+          <form className="form" onSubmit={(e)=>{e.preventDefault(); alert('Merci ! Nous vous recontactons sous 24h.');}}>
+            <div className="grid2">
+              <input required placeholder="Votre nom" />
+              <input type="email" required placeholder="Votre email" />
+            </div>
+            <input placeholder="Entreprise (optionnel)" />
+            <textarea rows={5} placeholder="Votre message" />
+            <button type="submit" className="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="container footer-row">
+          <span>© {new Date().getFullYear()} Clareo</span>
+          <nav className="footer-nav">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Mentions légales</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
   );
 }
