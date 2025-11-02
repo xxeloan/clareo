@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics manual tag */}
+        {/* Google Analytics script */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-X8QWB53HFX"
@@ -41,7 +41,6 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
