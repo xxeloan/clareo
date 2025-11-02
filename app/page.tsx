@@ -1,45 +1,35 @@
 // app/page.tsx
-import type React from "react";
+import type { CSSProperties } from "react";
 import Reveal from "./components/Reveal";
+import Image from "next/image"; // utile dès que tu remplaces les placeholders par de vraies captures
 
 export default function Home() {
   return (
     <main>
+      {/* Active l'observer d'animation (IntersectionObserver) */}
       <Reveal />
 
-      {/* ================= HERO ================ */}
+      {/* =========================
+          HERO
+         ========================= */}
       <section className="hero">
         <div className="container">
-          <h1 data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
+          <h1 data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
             Clareo — votre copilote financier
           </h1>
-          <p
-            data-reveal
-            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-          >
+
+          <p data-reveal style={{ ["--reveal-delay" as any]: "80ms" } as CSSProperties}>
             Une plateforme unique pour agréger vos comptes, piloter votre budget,
-            et investir en toute simplicité. Données bancaires sécurisées,
-            tableaux de bord clairs, et recommandations actionnables.
+            et investir en toute simplicité. Données bancaires sécurisées, tableaux de bord clairs,
+            et recommandations actionnables.
           </p>
 
-          <div
-            className="cta"
-            data-reveal
-            style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
-          >
-            <a className="btn btn-primary" href="#contact">
-              Demander une démo
-            </a>
-            <a className="btn btn-secondary" href="#features">
-              Voir les fonctionnalités
-            </a>
+          <div className="cta" data-reveal style={{ ["--reveal-delay" as any]: "160ms" } as CSSProperties}>
+            <a className="btn btn-primary" href="#contact">Demander une démo</a>
+            <a className="btn btn-secondary" href="#features">Voir les fonctionnalités</a>
           </div>
 
-          <div
-            className="trust"
-            data-reveal
-            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
-          >
+          <div className="trust" data-reveal style={{ ["--reveal-delay" as any]: "240ms" } as CSSProperties}>
             <span>🔒 Données chiffrées</span>
             <span>⚡ Temps réel</span>
             <span>📜 Conforme RGPD</span>
@@ -47,125 +37,137 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================ FEATURES =============== */}
+      {/* =========================
+          FEATURES
+         ========================= */}
       <section id="features" className="features">
         <div className="container">
           <div className="grid">
-            <div
-              className="card"
-              data-reveal
-              style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
-            >
+            <div className="card" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
               <h3>Agrégation multi-banques</h3>
               <p>
-                Connectez vos comptes (courant, épargne, crypto) et visualisez
-                tout en un seul endroit.
+                Connectez vos comptes (courant, épargne, crypto) et visualisez tout en un seul endroit.
               </p>
             </div>
 
-            <div
-              className="card"
-              data-reveal
-              style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-            >
+            <div className="card" data-reveal style={{ ["--reveal-delay" as any]: "80ms" } as CSSProperties}>
               <h3>Budget &amp; cashflow</h3>
               <p>
-                Catégorisation automatique, objectifs mensuels, alertes et
-                projections.
+                Catégorisation automatique, objectifs mensuels, alertes et projections.
               </p>
             </div>
 
-            <div
-              className="card"
-              data-reveal
-              style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
-            >
+            <div className="card" data-reveal style={{ ["--reveal-delay" as any]: "160ms" } as CSSProperties}>
               <h3>Investissements</h3>
               <p>
-                Suivi des portefeuilles, performance et répartition, indicateurs
-                clés.
+                Suivi des portefeuilles, performance et répartition, indicateurs clés.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= METRICS / KPIs ================ */}
-      <section className="metrics" data-reveal>
-        <div className="container kpis grid">
-          <div
-            className="kpi"
-            data-reveal
-            style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
-          >
-            <h4>+120k€</h4>
-            <p>Budget agrégé suivi / mois</p>
-          </div>
-          <div
-            className="kpi"
-            data-reveal
-            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-          >
-            <h4>98.9%</h4>
-            <p>Synchronisations bancaires réussies</p>
-          </div>
-          <div
-            className="kpi"
-            data-reveal
-            style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
-          >
-            <h4>~12 min</h4>
-            <p>Gagnées / semaine en automatisation</p>
+      {/* =========================
+          TÉMOIGNAGES
+         ========================= */}
+      <section id="testimonials" className="testimonials">
+        <div className="container">
+          <h2 className="section-title" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
+            Ils parlent de Clareo
+          </h2>
+
+          <div className="grid">
+            <article className="tcard" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
+              <div className="header">
+                <div className="avatar">AG</div>
+                <div className="who">
+                  <strong>Amélie G.</strong>
+                  <span>Dir. financière · PME</span>
+                </div>
+              </div>
+              <p className="quote">
+                « En un coup d’œil, je vois la trésorerie consolidée et les alertes de cashflow.
+                On a arrêté nos tableaux Excel. »
+              </p>
+              <div className="stars" aria-label="5/5">★★★★★</div>
+            </article>
+
+            <article className="tcard" data-reveal style={{ ["--reveal-delay" as any]: "80ms" } as CSSProperties}>
+              <div className="header">
+                <div className="avatar">MB</div>
+                <div className="who">
+                  <strong>Mehdi B.</strong>
+                  <span>Founder · Startup</span>
+                </div>
+              </div>
+              <p className="quote">
+                « L’agrégation multi-banque + les objectifs mensuels m’aident à piloter
+                mon runway et mes dépenses marketing. »
+              </p>
+              <div className="stars" aria-label="5/5">★★★★★</div>
+            </article>
+
+            <article className="tcard" data-reveal style={{ ["--reveal-delay" as any]: "160ms" } as CSSProperties}>
+              <div className="header">
+                <div className="avatar">JL</div>
+                <div className="who">
+                  <strong>Julie L.</strong>
+                  <span>Indépendante</span>
+                </div>
+              </div>
+              <p className="quote">
+                « Catégorisation auto nickel. Je reçois des recommandations concrètes pour optimiser. »
+              </p>
+              <div className="stars" aria-label="5/5">★★★★★</div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* ================= CTA FINAL ================ */}
-      <section className="bottom-cta">
-        <div
-          className="container"
-          data-reveal
-          style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
-        >
-          <h2>Prêt à piloter vos finances simplement ?</h2>
-          <p>
-            Connectez vos comptes, suivez votre budget et vos investissements au
-            même endroit.
-          </p>
-          <div className="cta">
-            <a className="btn btn-primary" href="#contact">
-              Demander une démo
-            </a>
-            <a className="btn btn-secondary" href="#features">
-              Revoir les fonctionnalités
-            </a>
+      {/* =========================
+          CAPTURES D’ÉCRAN (placeholders)
+         ========================= */}
+      <section id="screens" className="screens">
+        <div className="container">
+          <h2 className="section-title" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
+            Un aperçu du tableau de bord
+          </h2>
+
+          <div className="shot-grid">
+            {/* Placeholders élégants – remplace par tes vraies images dans /public/screenshots/ */}
+            <div className="shot" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
+              <div className="shot-placeholder">Dashboard — Synthèse</div>
+            </div>
+            <div className="shot" data-reveal style={{ ["--reveal-delay" as any]: "80ms" } as CSSProperties}>
+              <div className="shot-placeholder">Budgets &amp; objectifs</div>
+            </div>
+            <div className="shot" data-reveal style={{ ["--reveal-delay" as any]: "160ms" } as CSSProperties}>
+              <div className="shot-placeholder">Investissements &amp; perf</div>
+            </div>
+
+            {/*
+              Quand tu auras tes captures, mets-les dans /public/screenshots/
+              et remplace un bloc placeholder par :
+
+              <div className="shot" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as CSSProperties}>
+                <Image
+                  src="/screenshots/dashboard-1.png"
+                  alt="Aperçu tableau de bord"
+                  width={1280}
+                  height={800}
+                  className="img"
+                  priority
+                />
+              </div>
+            */}
+          </div>
+
+          <div className="cta-bottom" data-reveal style={{ ["--reveal-delay" as any]: "240ms" } as CSSProperties}>
+            <a href="#contact" className="btn btn-primary">Demander une démo</a>
+            <a href="#features" className="btn btn-secondary">Voir les fonctionnalités</a>
           </div>
         </div>
       </section>
-
-      {/* ================= FOOTER ================ */}
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <div
-            className="brand"
-            data-reveal
-            style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
-          >
-            <strong>Clareo</strong>
-            <span>© {new Date().getFullYear()}</span>
-          </div>
-
-          <nav
-            className="footer-nav"
-            data-reveal
-            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-          >
-            <a href="#features">Fonctionnalités</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Confidentialité</a>
-          </nav>
-        </div>
-      </footer>
     </main>
   );
 }
