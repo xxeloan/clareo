@@ -1,3 +1,5 @@
+// app/page.tsx
+import type React from "react";
 import Reveal from "./components/Reveal";
 
 export default function Home() {
@@ -5,19 +7,15 @@ export default function Home() {
     <main>
       <Reveal />
 
-      {/* HERO */}
+      {/* ================= HERO ================ */}
       <section className="hero">
         <div className="container">
-          <h1
-            data-reveal
-            style={{ "--reveal-delay": "40ms" } as React.CSSProperties}
-          >
+          <h1 data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
             Clareo — votre copilote financier
           </h1>
-
           <p
             data-reveal
-            style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
           >
             Une plateforme unique pour agréger vos comptes, piloter votre budget,
             et investir en toute simplicité. Données bancaires sécurisées,
@@ -27,7 +25,7 @@ export default function Home() {
           <div
             className="cta"
             data-reveal
-            style={{ "--reveal-delay": "180ms" } as React.CSSProperties}
+            style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
           >
             <a className="btn btn-primary" href="#contact">
               Demander une démo
@@ -37,30 +35,19 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="trust">
-            <span
-              data-reveal
-              style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
-            >
-              🔐 Données chiffrées
-            </span>
-            <span
-              data-reveal
-              style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
-            >
-              ⚡ Temps réel
-            </span>
-            <span
-              data-reveal
-              style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
-            >
-              📜 Conforme RGPD
-            </span>
+          <div
+            className="trust"
+            data-reveal
+            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
+          >
+            <span>🔒 Données chiffrées</span>
+            <span>⚡ Temps réel</span>
+            <span>📜 Conforme RGPD</span>
           </div>
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* ================ FEATURES =============== */}
       <section id="features" className="features">
         <div className="container">
           <div className="grid">
@@ -102,54 +89,83 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ================= METRICS / KPIs ================ */}
+      <section className="metrics" data-reveal>
+        <div className="container kpis grid">
+          <div
+            className="kpi"
+            data-reveal
+            style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
+          >
+            <h4>+120k€</h4>
+            <p>Budget agrégé suivi / mois</p>
+          </div>
+          <div
+            className="kpi"
+            data-reveal
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
+          >
+            <h4>98.9%</h4>
+            <p>Synchronisations bancaires réussies</p>
+          </div>
+          <div
+            className="kpi"
+            data-reveal
+            style={{ "--reveal-delay": "160ms" } as React.CSSProperties}
+          >
+            <h4>~12 min</h4>
+            <p>Gagnées / semaine en automatisation</p>
+          </div>
+        </div>
       </section>
 
-{/* METRICS / KPIs */}
-<section className="metrics">
-  <div className="container grid kpis">
-    <div className="kpi" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
-      <h4>+120k€</h4>
-      <p>Budget agrégé suivi / mois</p>
-    </div>
-    <div className="kpi" data-reveal style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
-      <h4>98.9%</h4>
-      <p>Synchronisations bancaires réussies</p>
-    </div>
-    <div className="kpi" data-reveal style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>
-      <h4>~12 min</h4>
-      <p>Gagnées / semaine en automatisation</p>
-    </div>
-  </div>
-</section>
+      {/* ================= CTA FINAL ================ */}
+      <section className="bottom-cta">
+        <div
+          className="container"
+          data-reveal
+          style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
+        >
+          <h2>Prêt à piloter vos finances simplement ?</h2>
+          <p>
+            Connectez vos comptes, suivez votre budget et vos investissements au
+            même endroit.
+          </p>
+          <div className="cta">
+            <a className="btn btn-primary" href="#contact">
+              Demander une démo
+            </a>
+            <a className="btn btn-secondary" href="#features">
+              Revoir les fonctionnalités
+            </a>
+          </div>
+        </div>
+      </section>
 
-{/* CTA FINAL */}
-<section className="bottom-cta">
-  <div className="container" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
-    <h2>Prêt à piloter vos finances simplement ?</h2>
-    <p>Connectez vos comptes, suivez votre budget et vos investissements au même endroit.</p>
-    <div className="cta">
-      <a className="btn btn-primary" href="#contact">Demander une démo</a>
-      <a className="btn btn-secondary" href="#features">Revoir les fonctionnalités</a>
-    </div>
-  </div>
-</section>
+      {/* ================= FOOTER ================ */}
+      <footer className="site-footer">
+        <div className="container footer-inner">
+          <div
+            className="brand"
+            data-reveal
+            style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
+          >
+            <strong>Clareo</strong>
+            <span>© {new Date().getFullYear()}</span>
+          </div>
 
-{/* FOOTER */}
-<footer className="site-footer">
-  <div className="container footer-inner">
-    <div className="brand" data-reveal style={{ "--reveal-delay": "0ms" } as React.CSSProperties}>
-      <strong>Clareo</strong>
-      <span>© {new Date().getFullYear()}</span>
-    </div>
-    <nav className="footer-nav" data-reveal style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
-      <a href="#features">Fonctionnalités</a>
-      <a href="#contact">Contact</a>
-      <a href="#">Confidentialité</a>
-    </nav>
-  </div>
-</footer>
-
-</main>
+          <nav
+            className="footer-nav"
+            data-reveal
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
+          >
+            <a href="#features">Fonctionnalités</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Confidentialité</a>
+          </nav>
+        </div>
+      </footer>
     </main>
   );
 }
