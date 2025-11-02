@@ -5,77 +5,85 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="container">
-          <h1>Clareo — Finance claire, décisions rapides.</h1>
+          <h1>Clareo — votre copilote financier</h1>
           <p>
-            Plateforme fintech pour piloter vos flux, visualiser vos indicateurs et
-            automatiser votre conformité. En temps réel, simple, sécurisé.
+            Une plateforme unique pour agréger vos comptes, piloter votre budget, et
+            investir en toute simplicité. Données bancaires sécurisées, tableaux de bord
+            clairs, et recommandations actionnables.
           </p>
+
           <div className="cta">
-            <a href="#contact" className="btn btn-primary">Demander une démo</a>
-            <a href="#features" className="btn btn-secondary">Voir les fonctionnalités</a>
+            <a className="btn btn-primary" href="#contact">Demander une démo</a>
+            <a className="btn btn-secondary" href="#features">Voir les fonctionnalités</a>
           </div>
+
           <div className="trust">
-            <span>Chiffrement AES-256</span>
-            <span>RGPD ready</span>
-            <span>99,9% dispo</span>
+            <span>🔐 Données chiffrées</span>
+            <span>⚡ Temps réel</span>
+            <span>🇪🇺 Conforme RGPD</span>
           </div>
         </div>
       </section>
 
-      {/* VALUE PROPS */}
+      {/* FEATURES */}
       <section id="features" className="features">
-        <div className="container grid">
-          <div className="card">
-            <h3>Vue cash instantanée</h3>
-            <p>Tableau de bord temps réel de trésorerie, encours et prévisions.</p>
-          </div>
-          <div className="card">
-            <h3>Automations</h3>
-            <p>Rapprochements, exports comptables, alertes seuils & anomalies.</p>
-          </div>
-          <div className="card">
-            <h3>Conformité intégrée</h3>
-            <p>KYC/KYB, journaux, rôles & permissions, audit trail complet.</p>
+        <div className="container">
+          <div className="grid">
+            <div className="card">
+              <h3>Agrégation multi-banques</h3>
+              <p>Connectez vos comptes (courant, épargne, crypto) et visualisez tout en un seul endroit.</p>
+            </div>
+            <div className="card">
+              <h3>Budget & cashflow</h3>
+              <p>Catégorisation automatique, objectifs mensuels, alertes et projections.</p>
+            </div>
+              <div className="card">
+              <h3>Investissements</h3>
+              <p>Suivi des portefeuilles, performance et répartition, indicateurs clés.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES / MOCKUP */}
       <section className="services">
-        <div className="container grid-2">
-          <div>
-            <h2>Connecté à vos banques & outils</h2>
-            <p>API bancaires (open banking), ERP/Compta, CRM et outils no-code.</p>
-            <ul className="list">
-              <li>Connexions sécurisées, OAuth & webhooks</li>
-              <li>Exports XLSX/CSV, API REST</li>
-              <li>Règles métiers personnalisables</li>
-            </ul>
+        <div className="container">
+          <div className="grid-2">
+            <div>
+              <h2>Tableau de bord clair & actionnable</h2>
+              <ul className="list">
+                <li>Vue consolidée de vos finances</li>
+                <li>Recommandations personnalisées</li>
+                <li>Export comptable en 1 clic</li>
+              </ul>
+            </div>
+            <div className="panel mockup">
+              Aperçu produit (mockup)
+            </div>
           </div>
-          <div className="panel mockup">Espace graphique / mockup (à venir)</div>
         </div>
       </section>
 
-      {/* CONTACT / DEMO */}
+      {/* CONTACT */}
       <section id="contact" className="contact">
         <div className="container">
           <h2>Parlons de vos besoins</h2>
-          <p>Laisse ton email, on te recontacte dans la journée.</p>
-          <form className="inline-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="ton@email.com" required />
-            <button type="submit" className="btn btn-primary">Envoyer</button>
+          <p>Laissez votre email, on vous recontacte en 24h.</p>
+          <form className="inline-form" action="https://formspree.io/f/mayvlbby" method="POST">
+            <input type="email" name="email" placeholder="Votre e-mail" required />
+            <button className="btn btn-primary" type="submit">Je veux une démo</button>
           </form>
-          <small>Pas de spam. Désinscription en un clic.</small>
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-grid">
-          <span>© {new Date().getFullYear()} Clareo</span>
+          <div>© {new Date().getFullYear()} Clareo</div>
           <nav className="footer-nav">
             <a href="#">Sécurité</a>
             <a href="#">Confidentialité</a>
-            <a href="#">Statut</a>
+            <a href="#">Contact</a>
           </nav>
         </div>
       </footer>
