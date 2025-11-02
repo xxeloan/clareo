@@ -363,3 +363,71 @@ img, svg, video {
   margin-top: 22px;
   display:flex; gap:10px; flex-wrap: wrap;
 }
+/* =========================
+   Metrics strip (KPI) + Badges
+   ========================= */
+.metrics{
+  padding: 38px 0 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%);
+}
+
+.metrics-strip{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.metric{
+  grid-column: span 3;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px 14px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.metric:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.m-value{
+  font-weight: 800;
+  font-size: clamp(20px, 3.2vw, 28px);
+  letter-spacing: .2px;
+  line-height: 1.1;
+}
+
+.m-label{
+  margin-top: 2px;
+  opacity: .8;
+  font-size: 13px;
+}
+
+@media (max-width: 980px){
+  .metric{ grid-column: span 6; }
+}
+@media (max-width: 640px){
+  .metric{ grid-column: 1 / -1; }
+}
+
+/* Badges ligne */
+.badges{
+  display: flex; flex-wrap: wrap; gap: 8px 10px;
+  margin-top: 14px;
+}
+
+.badge{
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}

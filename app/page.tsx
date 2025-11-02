@@ -66,6 +66,39 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* =========================
+    METRICS + BADGES (no logos)
+   ========================= */}
+<section className="metrics" id="metrics">
+  <div className="container">
+    <div className="metrics-strip">
+      <div className="metric" data-reveal style={{ ["--reveal-delay" as any]: "0ms" } as React.CSSProperties}>
+        <div className="m-value">12 000+</div>
+        <div className="m-label">comptes connectés</div>
+      </div>
+      <div className="metric" data-reveal style={{ ["--reveal-delay" as any]: "80ms" } as React.CSSProperties}>
+        <div className="m-value">94%</div>
+        <div className="m-label">catégorisation auto.</div>
+      </div>
+      <div className="metric" data-reveal style={{ ["--reveal-delay" as any]: "160ms" } as React.CSSProperties}>
+        <div className="m-value">+18%</div>
+        <div className="m-label">cashflow anticipé</div>
+      </div>
+      <div className="metric" data-reveal style={{ ["--reveal-delay" as any]: "240ms" } as React.CSSProperties}>
+        <div className="m-value">4.9★</div>
+        <div className="m-label">satisfaction</div>
+      </div>
+    </div>
+
+    <div className="badges" data-reveal style={{ ["--reveal-delay" as any]: "320ms" } as React.CSSProperties}>
+      <span className="badge">🔐 Chiffrement AES-256</span>
+      <span className="badge">📜 Conforme RGPD</span>
+      <span className="badge">🔌 Connexions bancaires PSD2</span>
+      <span className="badge">🛡️ Bonnes pratiques ISO 27001</span>
+    </div>
+  </div>
+</section>
 
       {/* =========================
           TÉMOIGNAGES
